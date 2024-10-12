@@ -8,5 +8,4 @@ pub fn lock_window(app: &AppHandle) {
         .expect("Sorry, no window found")
         .set_focus()
         .expect("Can't Bring Window to Focus");
-
 }

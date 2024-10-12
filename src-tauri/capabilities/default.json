@@ -15,6 +15,7 @@
     "core:window:allow-close",
     "core:webview:allow-create-webview-window",
     "core:window:allow-set-always-on-top",
-    "notification:default"
+    "notification:default",
+    "os:default"
   ]
 }
