@@ -1,0 +1,30 @@
+.titlebar {
+  height: 30px;
+  user-select: none;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.titlebar-button,
+.titlebar-button-pin {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.titlebar-button-pin {
+  background: #ccc;
+}
+
+.titlebar-button-pin:hover,
+.titlebar-button:hover {
+  background: #e2e2e2;
+}
