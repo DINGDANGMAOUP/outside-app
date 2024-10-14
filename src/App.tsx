@@ -7,6 +7,7 @@ function App() {
     <div className="h-full">
      {getOS()=="windows"&& <TitleBar />}
       <Layout />
+      <Toaster />
     </div>
   );
 }

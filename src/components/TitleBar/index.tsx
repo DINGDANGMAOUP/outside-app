@@ -14,6 +14,8 @@ const TitleBar: React.FC = () => {
   useAsyncEffect(async () => {
     await getCurrentWindow().setAlwaysOnTop(pin);
   }, [pin]);
+
+
   return (
     <div data-tauri-drag-region className={styles.titlebar}>
       <div className={pin?styles['titlebar-button-pin']:styles['titlebar-button']} onClick={changeTop}>

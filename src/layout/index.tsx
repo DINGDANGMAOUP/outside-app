@@ -1,11 +1,15 @@
 import Content from "./Content"
-import Sider from "./Sider"
-
+import Sidebar from "./Sidebar"
+import styles from './index.module.css'
 const Layout = () => {
   return (
-    <div className="grid grid-cols-2">
-      <Sider />
-      <Content />
+    <div className={styles.layout}>
+      <Sidebar>
+        <Button>Click me</Button>
+      </Sidebar>
+      <Content>
+        content
+      </Content>
     </div>
   )
 }

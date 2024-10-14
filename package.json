@@ -12,6 +12,7 @@
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.2",
     "@tauri-apps/api": ">=2.0.0",
     "@tauri-apps/plugin-notification": "~2",
     "@tauri-apps/plugin-os": "~2",

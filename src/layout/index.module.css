@@ -1,2 +1,5 @@
 .layout{
+  --side-color-light: #dfdfe0;
+  --side-color-dark: #3d3c3b;
+  @apply flex flex-row  h-screen;
 }

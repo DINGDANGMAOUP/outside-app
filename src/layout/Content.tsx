@@ -1,7 +1,12 @@
+interface ContentProps {
+  children?: React.ReactNode;
+} 
 
-const Content = () => {
+const Content:React.FC<ContentProps> = ({children}) => {
   return (
-    <div className="row-end-3 pt-[var(--title-bar-height)]">Content</div>
+    <div className="pt-[var(--title-bar-height)] w-full">
+      {children}
+    </div>
   )
 }
 
