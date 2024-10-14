@@ -25,7 +25,7 @@ const TitleBar: React.FC = () => {
       <div className={styles['titlebar-button']} onClick={maximize}>
         <IconLocalMaximize />
       </div>
-      <div className={styles['titlebar-button']} onClick={close}>
+      <div className={styles['titlebar-button-close']} onClick={close}>
         <IconLocalClose />
       </div>
     </div>

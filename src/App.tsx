@@ -1,14 +1,12 @@
-import { Button } from "@nextui-org/react";
 import { getOS } from "@/utils/system";
+import Layout from "./layout";
 
 // import "./App.css";
 function App() {
   return (
     <div className="h-full">
      {getOS()=="windows"&& <TitleBar />}
-      <Button color="primary" >
-        Button
-      </Button>
+      <Layout />
     </div>
   );
 }
