@@ -9,7 +9,7 @@ const Layout = () => {
       <HeadPanel />
       </Sidebar>
       <Content>
-        content
+        <Outlet />
       </Content>
     </div>
   )

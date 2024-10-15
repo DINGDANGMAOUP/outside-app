@@ -16,7 +16,7 @@ export default defineConfig(async () => {
   return {
     plugins: [react(), tsconfigPaths(),
     AutoImport({
-      imports: ['react'],
+      imports: ['react','react-i18next','react-router-dom'],
       dirs: ['./src/components/**'],
       dts: './src/typing/auto-imports.d.ts',
       resolvers: [

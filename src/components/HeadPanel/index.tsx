@@ -2,6 +2,7 @@ import FluentAdd16Regular from '~icons/fluent/add-16-regular';
 import LucideUserCog from '~icons/lucide/user-cog';
 import FluentSettings16Regular from '~icons/fluent/settings-16-regular';
 const HeadPanel: React.FC = () => {
+  const { t } = useTranslation()
   return (
     <div>
       <div className="flex flex-row justify-between">
@@ -22,10 +23,7 @@ const HeadPanel: React.FC = () => {
             <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Billing</DropdownMenuItem>
-              <DropdownMenuItem>Team</DropdownMenuItem>
-              <DropdownMenuItem><FluentSettings16Regular/>设置</DropdownMenuItem>
+              <DropdownMenuItem><FluentSettings16Regular/>{t('head-panel.setting')}</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

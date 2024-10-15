@@ -1,5 +1,4 @@
 import { Window, getCurrentWindow } from '@tauri-apps/api/window';
-
 import styles from './index.module.css'
 import { useAsyncEffect } from 'ahooks';
 const TitleBar: React.FC = () => {
