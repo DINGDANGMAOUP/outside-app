@@ -24,6 +24,7 @@ declare global {
   const DropdownMenuTrigger: typeof import('../components/ui/dropdown-menu')['DropdownMenuTrigger']
   const HeadPanel: typeof import('../components/HeadPanel/index')['default']
   const IconLocalClose: typeof import('~icons/local/close.jsx')['default']
+  const IconLocalLogo: typeof import('~icons/local/logo.jsx')['default']
   const IconLocalMaximize: typeof import('~icons/local/maximize.jsx')['default']
   const IconLocalMinimize: typeof import('~icons/local/minimize.jsx')['default']
   const IconLocalPin: typeof import('~icons/local/pin.jsx')['default']

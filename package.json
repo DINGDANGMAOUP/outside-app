@@ -29,6 +29,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@iconify-json/fluent": "^1.2.4",
+    "@iconify-json/lucide": "^1.2.9",
+    "@iconify-json/quill": "^1.2.1",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@tauri-apps/cli": ">=2.0.0",

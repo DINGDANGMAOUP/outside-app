@@ -5,7 +5,7 @@
   justify-content: flex-end;
   position: fixed;
   top: 0;
-  left: 0;
+  left: var(--side-width);
   right: 0;
 }
 
