@@ -5,16 +5,26 @@ use tauri::{
 };
 
 pub fn init(app: &mut App) -> Result<(), Box<dyn std::error::Error>> {
-    let toggle = MenuItemBuilder::with_id("toggle", "Toggle").build(app)?;
-    let menu = MenuBuilder::new(app).items(&[&toggle]).build()?;
+    let exit = MenuItemBuilder::with_id("quit", "Quit").build(app)?;
+    // let toggle = MenuItemBuilder::with_id("toggle", "Toggle").build(app)?;
+    let refresh = MenuItemBuilder::with_id("refresh", "Refresh").build(app)?;
+    let menu = MenuBuilder::new(app)
+        .items(&[&exit, &refresh])
+        .build()?;
     let _tray = TrayIconBuilder::new()
         .icon(app.default_window_icon().unwrap().clone())
         .menu(&menu)
         .on_menu_event(move |app, event| match event.id().as_ref() {
-            "toggle" => {
-                println!("app: {:?}", app);
-                println!("event: {:?}", event);
-                println!("toggle clicked");
+            // "toggle" => {
+            //     println!("app: {:?}", app);
+            //     println!("event: {:?}", event);
+            //     println!("toggle clicked");
+            // }
+            "quit" => {
+                app.exit(0);
+            }
+            "refresh" => {
+                app.restart();
             }
             _ => (),
         })

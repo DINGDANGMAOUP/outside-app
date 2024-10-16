@@ -1,5 +1,9 @@
 .layout{
-  --side-color-light: #dfdfe0;
-  --side-color-dark: #3d3c3b;
-  @apply flex flex-row  h-screen;
+  @apply flex flex-row  h-screen overflow-hidden;
+}
+[data-theme="light"]{
+  --side-color-bg: #dfdfe0;
+}
+[data-theme="dark"]{
+  --side-color-bg: #3d3c3b;
 }

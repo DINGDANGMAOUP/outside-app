@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <div className={styles.layout}>
       <Sidebar>
-      <HeadPanel />
+        <SidePanel />
       </Sidebar>
       <Content>
         <Outlet />

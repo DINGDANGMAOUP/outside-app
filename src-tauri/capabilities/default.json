@@ -16,6 +16,11 @@
     "core:webview:allow-create-webview-window",
     "core:window:allow-set-always-on-top",
     "notification:default",
-    "os:default"
+    "os:default",
+    "store:default",
+    "store:allow-get",
+    "store:allow-set",
+    "store:allow-save",
+    "store:allow-load"
   ]
 }

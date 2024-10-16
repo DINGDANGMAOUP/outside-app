@@ -14,20 +14,21 @@ const TitleBar: React.FC = () => {
     await getCurrentWindow().setAlwaysOnTop(pin);
   }, [pin]);
 
-
   return (
-    <div data-tauri-drag-region className={styles.titlebar}>
-      <div className={pin ? styles['titlebar-button-pin'] : styles['titlebar-button']} onClick={changeTop}>
-        {pin ? <IconLocalPin /> : <IconLocalPinOff />}
-      </div>
-      <div className={styles['titlebar-button']} onClick={minimize}>
-        <IconLocalMinimize />
-      </div>
-      <div className={styles['titlebar-button']} onClick={maximize}>
-        <IconLocalMaximize />
-      </div>
-      <div className={styles['titlebar-button-close']} onClick={close}>
-        <IconLocalClose />
+    <div data-tauri-drag-region className={styles.titlebar} aria-hidden>
+      <div data-tauri-drag-region className={styles['title-toolbar']}>
+        <div className={pin ? styles['titlebar-button-pin'] : styles['titlebar-button']} onClick={changeTop}>
+          {pin ? <IconLocalPin /> : <IconLocalPinOff />}
+        </div>
+        <div className={styles['titlebar-button']} onClick={minimize}>
+          <IconLocalMinimize />
+        </div>
+        <div className={styles['titlebar-button']} onClick={maximize}>
+          <IconLocalMaximize />
+        </div>
+        <div className={styles['titlebar-button-close']} onClick={close}>
+          <IconLocalClose />
+        </div>
       </div>
     </div>
   )

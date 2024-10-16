@@ -16,7 +16,7 @@ const HeadPanel: React.FC = () => {
           <Button variant="ghost" size='sm' >
             <FluentAdd16Regular className="w-6 h-6 " />
           </Button>
-          <DropdownMenu modal={false}>
+          <DropdownMenu modal={false} >
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size='sm'  >
                 <LucideUserCog className="w-6 h-6 " />
@@ -34,7 +34,7 @@ const HeadPanel: React.FC = () => {
         <Dialog open={visible} onOpenChange={() => setVisible(false)} modal>
         <DialogContent>
           <DialogHeader>
-            {/* <DialogTitle></DialogTitle> */}
+            <DialogTitle></DialogTitle>
             <DialogDescription>
               This action cannot be undone. This will permanently delete your account
               and remove your data from our servers.

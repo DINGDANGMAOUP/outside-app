@@ -4,5 +4,5 @@ pub fn greet(name: &str) -> String {
 }
 #[tauri::command]
 pub fn get_os() -> String {
-   tauri_plugin_os::platform().to_string()
+    tauri_plugin_os::platform().to_string()
 }

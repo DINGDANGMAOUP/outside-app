@@ -18,7 +18,7 @@
         "width": 1200,
         "height": 900,
         "decorations": false,
-        "shadow":true
+        "shadow": true
       }
     ],
     "security": {

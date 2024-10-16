@@ -46,6 +46,7 @@ declare global {
   const Outlet: typeof import('react-router-dom')['Outlet']
   const Route: typeof import('react-router-dom')['Route']
   const Routes: typeof import('react-router-dom')['Routes']
+  const SidePanel: typeof import('../components/SidePanel/index')['default']
   const ThemeProvider: typeof import('../components/ThemeProvider/index')['ThemeProvider']
   const TitleBar: typeof import('../components/TitleBar/index')['default']
   const Toast: typeof import('../components/ui/toast')['Toast']

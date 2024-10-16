@@ -4,7 +4,7 @@ interface SidebarProps {
 }
 const Sidebar:React.FC<SidebarProps> = ({children}) => {
   return (
-    <div data-tauri-drag-region className="w-[var(--side-width)] bg-[var(--side-color-light)] dark:bg-[var(--side-color-dark)] flex-shrink-0 p-3">
+    <div className="overflow-hidden absolute inset-y-0 z-[2] w-[var(--side-width)] bg-[var(--side-color-bg)] flex-shrink-0">
       {children}
     </div>
   )

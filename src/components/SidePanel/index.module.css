@@ -1,0 +1,4 @@
+.side-panel{
+  background-color: var(--side-color-bg);
+  @apply relative flex h-full flex-col space-y-3 pt-2.5;
+}
