@@ -21,7 +21,7 @@ const HeadPanel: React.FC = () => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuLabel>{t('head-panel.label')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem><FluentSettings16Regular/>{t('head-panel.setting')}</DropdownMenuItem>
             </DropdownMenuContent>
