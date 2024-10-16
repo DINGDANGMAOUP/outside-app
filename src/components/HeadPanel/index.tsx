@@ -3,8 +3,10 @@ import LucideUserCog from '~icons/lucide/user-cog';
 import FluentSettings16Regular from '~icons/fluent/settings-16-regular';
 const HeadPanel: React.FC = () => {
   const { t } = useTranslation()
+  const [visible, setVisible] = useState(false)
+  // [bug]: cannot use Dropdown menu with dialog#4068 https://github.com/shadcn-ui/ui/issues/4068 
+  // useEffect(() => { return () => { document.body.style.pointerEvents = ""; }; }, [visible]);
   return (
-    <div>
       <div className="flex flex-row justify-between">
         <div className="flex flex-row items-center">
           <IconLocalLogo className="w-6 h-6" />
@@ -14,7 +16,7 @@ const HeadPanel: React.FC = () => {
           <Button variant="ghost" size='sm' >
             <FluentAdd16Regular className="w-6 h-6 " />
           </Button>
-          <DropdownMenu>
+          <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size='sm'  >
                 <LucideUserCog className="w-6 h-6 " />
@@ -23,11 +25,24 @@ const HeadPanel: React.FC = () => {
             <DropdownMenuContent>
               <DropdownMenuLabel>{t('head-panel.label')}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem><FluentSettings16Regular/>{t('head-panel.setting')}</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setVisible(true)}>
+                <FluentSettings16Regular />{t('head-panel.setting')}
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-      </div></div>
+        <Dialog open={visible} onOpenChange={() => setVisible(false)} modal>
+        <DialogContent>
+          <DialogHeader>
+            {/* <DialogTitle></DialogTitle> */}
+            <DialogDescription>
+              This action cannot be undone. This will permanently delete your account
+              and remove your data from our servers.
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+      </div>
   )
 }
 

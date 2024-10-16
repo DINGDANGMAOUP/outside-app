@@ -7,6 +7,16 @@
 export {}
 declare global {
   const Button: typeof import('../components/ui/button')['Button']
+  const Dialog: typeof import('../components/ui/dialog')['Dialog']
+  const DialogClose: typeof import('../components/ui/dialog')['DialogClose']
+  const DialogContent: typeof import('../components/ui/dialog')['DialogContent']
+  const DialogDescription: typeof import('../components/ui/dialog')['DialogDescription']
+  const DialogFooter: typeof import('../components/ui/dialog')['DialogFooter']
+  const DialogHeader: typeof import('../components/ui/dialog')['DialogHeader']
+  const DialogOverlay: typeof import('../components/ui/dialog')['DialogOverlay']
+  const DialogPortal: typeof import('../components/ui/dialog')['DialogPortal']
+  const DialogTitle: typeof import('../components/ui/dialog')['DialogTitle']
+  const DialogTrigger: typeof import('../components/ui/dialog')['DialogTrigger']
   const DropdownMenu: typeof import('../components/ui/dropdown-menu')['DropdownMenu']
   const DropdownMenuCheckboxItem: typeof import('../components/ui/dropdown-menu')['DropdownMenuCheckboxItem']
   const DropdownMenuContent: typeof import('../components/ui/dropdown-menu')['DropdownMenuContent']
