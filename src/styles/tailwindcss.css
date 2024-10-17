@@ -64,3 +64,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .drag-region {
+    -webkit-app-region: drag;
+  }
+  .no-drag-region {
+    -webkit-app-region: no-drag;
+  }
+}

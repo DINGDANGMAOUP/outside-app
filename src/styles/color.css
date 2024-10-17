@@ -1,0 +1,7 @@
+html {
+  --side-color-bg: #dfdfe0;
+  
+  &.dark {
+    --side-color-bg: #3d3c3b;
+  }
+}

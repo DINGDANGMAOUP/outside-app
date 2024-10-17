@@ -7,7 +7,7 @@ import router from "./route";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+     <ThemeProvider defaultTheme="dark" storageKey="outside-app-theme">
      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>,
