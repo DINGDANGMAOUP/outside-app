@@ -30,7 +30,7 @@ export default defineConfig(async () => {
       customCollections: {
         local: FileSystemIconLoader(
           'src/assets/icons',
-          // svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
+          svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
         ),
       },
     })],

@@ -1,4 +1,9 @@
 {
   "head-panel.setting": "设置",
-  "head-panel.label": "我的账号"
+  "head-panel.label": "我的账号",
+
+  "mode-toggle.auto": "跟随系统",
+  "mode-toggle.dark": "深色模式",
+  "mode-toggle.light": "浅色模式",
+  "mode-toggle.toggle": "切换主题"
 }

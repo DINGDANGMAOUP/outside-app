@@ -1,4 +1,9 @@
 {
   "head-panel.setting": "Setting",
-  "head-panel.label": "My Account"
+  "head-panel.label": "My Account",
+
+  "mode-toggle.dark": "Dark",
+  "mode-toggle.light": "Light",
+  "mode-toggle.auto": "Auto",
+  "mode-toggle.toggle": "Toggle Theme"
 }
