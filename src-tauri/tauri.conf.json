@@ -12,6 +12,7 @@
   "app": {
     "windows": [
       {
+        "label": "main",
         "title": "outside-app",
         "minWidth": 1024,
         "minHeight": 500,
@@ -20,6 +21,7 @@
         "decorations": false,
         "shadow": true
       }
+
     ],
     "security": {
       "csp": null

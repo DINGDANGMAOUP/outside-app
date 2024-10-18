@@ -1,6 +1,18 @@
+import { Window } from '@tauri-apps/api/window'
 import styles from './index.module.css'
 
 const SidePanel: React.FC = () => {
+  const createWindow = () => {
+    const appWindow = new Window('login')
+    appWindow.once('tauri://created', () => {
+      console.log('window successfully created')
+      // window successfully created
+    })
+    appWindow.once('tauri://error', (e) => {
+      console.log('an error happened creating the window', e)
+      // an error happened creating the window
+    })
+  }
   return (
     <div className={styles['side-panel']}>
       <div className="ml-4 mr-3 flex items-center justify-between">
@@ -19,7 +31,7 @@ const SidePanel: React.FC = () => {
       </div>
       <div className="flex w-full justify-between px-3 text-xl">
         <Button variant="ghost" size="sm" className="no-drag-region flex size-8 h-11 flex-col items-center justify-center gap-1 rounded-md text-xl  duration-200 ">
-          <IconLineMdDocumentListTwotone className="size-6 " />
+          <IconLineMdFileDocument className="size-6 " />
           <div className="text-[0.625rem] font-medium leading-none">0</div>
         </Button>
         <Button variant="ghost" size="sm" className="no-drag-region flex size-8 h-11 flex-col items-center justify-center gap-1 rounded-md text-xl  duration-200 ">
@@ -51,6 +63,7 @@ const SidePanel: React.FC = () => {
                 <div className="font-bold">文章</div>
                 <div className="ml-2 flex items-center gap-3 text-sm ">
                   <ModeToggle />
+                  <Button onClick={createWindow} variant="default">createWindow</Button>
                 </div>
               </div>
               <div className="relative h-full overflow-hidden">收藏</div>

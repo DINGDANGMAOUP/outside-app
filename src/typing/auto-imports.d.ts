@@ -37,6 +37,7 @@ declare global {
   const IconFluentAdd16Regular: typeof import('~icons/fluent/add16-regular.jsx')['default']
   const IconJamPicture: typeof import('~icons/jam/picture.jsx')['default']
   const IconLineMdDocumentListTwotone: typeof import('~icons/line-md/document-list-twotone.jsx')['default']
+  const IconLineMdFileDocument: typeof import('~icons/line-md/file-document.jsx')['default']
   const IconLineMdImageFilled: typeof import('~icons/line-md/image-filled.jsx')['default']
   const IconLineMdLightDarkLoop: typeof import('~icons/line-md/light-dark-loop.jsx')['default']
   const IconLineMdMoonFilledAltToSunnyFilledLoopTransition: typeof import('~icons/line-md/moon-filled-alt-to-sunny-filled-loop-transition.jsx')['default']
