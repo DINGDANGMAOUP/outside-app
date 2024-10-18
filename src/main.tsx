@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import '@/styles/main.css'
 import '@/utils/i18n'
 import { RouterProvider } from "react-router-dom";
+import './styles/main.css'
 import router from "./route";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
