@@ -1,8 +1,8 @@
-import Content from "./Content"
-import Sidebar from "./Sidebar"
+import Content from './Content'
 import styles from './index.module.css'
+import Sidebar from './Sidebar'
 
-const Layout = () => {
+function Layout() {
   return (
     <div className={styles.layout}>
       <Sidebar>

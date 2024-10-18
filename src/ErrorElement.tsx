@@ -1,5 +1,4 @@
-
-const ErrorElement = () => {
+function ErrorElement() {
   return (
     <div>ErrorElement</div>
   )

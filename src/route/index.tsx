@@ -1,20 +1,19 @@
-import App from "@/App";
-import ErrorElement from "@/ErrorElement";
-import NotFound from "@/NotFound";
-import { createBrowserRouter } from "react-router-dom";
+import App from '@/App'
+import ErrorElement from '@/ErrorElement'
+import NotFound from '@/NotFound'
+import { createBrowserRouter } from 'react-router-dom'
 
-const router=createBrowserRouter([
+const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     Component: App,
     // children: tree,
     errorElement: <ErrorElement />,
   },
   {
-    path: "*",
+    path: '*',
     element: <NotFound />,
   },
 ])
 
-
-export default router;
+export default router

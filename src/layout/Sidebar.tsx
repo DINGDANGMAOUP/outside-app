@@ -1,10 +1,9 @@
-
 interface SidebarProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode
 }
-const Sidebar:React.FC<SidebarProps> = ({children}) => {
+const Sidebar: React.FC<SidebarProps> = ({ children }) => {
   return (
-    <div className="overflow-hidden absolute inset-y-0 z-[2] w-[var(--side-width)] bg-[var(--side-color-bg)] flex-shrink-0">
+    <div className="absolute inset-y-0 z-[2] w-[var(--side-width)] shrink-0 overflow-hidden bg-[var(--side-color-bg)]">
       {children}
     </div>
   )

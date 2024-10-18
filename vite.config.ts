@@ -1,22 +1,20 @@
-import path from "path"
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tsconfigPaths from 'vite-tsconfig-paths'
+import react from '@vitejs/plugin-react'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
+import { defineConfig } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 // loader helpers
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
-const host = process.env.TAURI_DEV_HOST;
+const host = process.env.TAURI_DEV_HOST
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
   return {
-    plugins: [react(), tsconfigPaths(),
-    AutoImport({
-      imports: ['react','react-i18next','react-router-dom'],
+    plugins: [react(), tsconfigPaths(), AutoImport({
+      imports: ['react', 'react-i18next', 'react-router-dom'],
       dirs: ['./src/components/**'],
       dts: './src/typing/auto-imports.d.ts',
       resolvers: [
@@ -26,18 +24,16 @@ export default defineConfig(async () => {
           customCollections: ['local'],
         }),
       ],
-    }),
-    Icons({
+    }), Icons({
       autoInstall: true,
       compiler: 'jsx',
       customCollections: {
-        'local': FileSystemIconLoader(
+        local: FileSystemIconLoader(
           'src/assets/icons',
           // svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
         ),
-      }
-    })
-    ],
+      },
+    })],
     // resolve: {
     //   alias: {
     //     "@": path.resolve(__dirname, "./src"),
@@ -54,15 +50,15 @@ export default defineConfig(async () => {
       host: host || false,
       hmr: host
         ? {
-          protocol: "ws",
-          host,
-          port: 1421,
-        }
+            protocol: 'ws',
+            host,
+            port: 1421,
+          }
         : undefined,
       watch: {
         // 3. tell vite to ignore watching `src-tauri`
-        ignored: ["**/src-tauri/**"],
+        ignored: ['**/src-tauri/**'],
       },
     },
   }
-});
+})
