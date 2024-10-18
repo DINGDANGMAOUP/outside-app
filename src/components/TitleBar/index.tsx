@@ -5,9 +5,9 @@ import styles from './index.module.css'
 const TitleBar: React.FC = () => {
   const [pin, setPin] = useState(false)
   const appWindow = new Window('main')
-  const minimize = () => appWindow.minimize()
-  const maximize = () => appWindow.toggleMaximize()
-  const close = () => appWindow.close()
+  const minimize = async () => appWindow.minimize()
+  const maximize = async () => appWindow.toggleMaximize()
+  const close = async () => appWindow.close()
   const changeTop = () => {
     setPin(!pin)
   }

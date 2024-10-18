@@ -10,9 +10,6 @@ export default antfu(
   {
     ignores: ['src-tauri/**', 'src/components/ui/**', '.vscode/**', '.cargo/**'],
     react: true,
-    typescript: {
-      tsconfigPath: 'tsconfig.json',
-    },
     formatters: {
     /**
      * Format CSS, LESS, SCSS files, also the `<style>` blocks in Vue

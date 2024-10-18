@@ -31,8 +31,8 @@ const Demo: React.FC = (props) => {
     setGreetMsg(await invoke('greet', { name }))
   }
   const appWindow = new Window('main')
-  const minimize = () => appWindow.minimize()
-  const maximize = () => appWindow.toggleMaximize()
+  const minimize = async () => appWindow.minimize()
+  const maximize = async () => appWindow.toggleMaximize()
   const close = () => {
     notification()
     appWindow.close()
